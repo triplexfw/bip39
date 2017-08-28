@@ -460,7 +460,7 @@
 
     function validateRootKey(rootKeyBase58) {
         try {
-            bitcoinjs.bitcoin.HDNode.fromBase58(rootKeyBase58);
+            bitcoinjs.bitcoin.HDNode.fromBase58(rootKeyBase58, network);
         }
         catch (e) {
             return "Invalid root key";
